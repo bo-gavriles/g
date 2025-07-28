@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gavrilets Digital Consulting / Mentor</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light dark;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: white;
+      color: #111;
+    }
+    html.dark body {
+      background-color: #111;
+      color: #fefefe;
+    }
+    .lang-switcher button {
+      margin-right: 1rem;
+    }
+  </style>
+</head>
+<body class="transition-colors duration-300">
+  <main class="max-w-3xl mx-auto py-12 px-4">
+    <div class="flex justify-between items-center mb-6">
+      <div class="text-xl font-bold">Gavrilets Digital Consulting</div>
+      <div class="lang-switcher text-sm">
+        <button onclick="setLang('en')">EN</button>
+        <button onclick="setLang('es')">ES</button>
+        <button onclick="setLang('ru')">RU</button>
+        <button onclick="toggleTheme()">🌗</button>
+      </div>
+    </div>
+
+    <section id="intro" class="mb-12">
+      <h1 class="text-3xl font-bold mb-4" data-i18n="intro_title">Hi, I’m Bogdan.</h1>
+      <p class="text-lg" data-i18n="intro_text">
+        I’m currently looking for a meaningful full-time opportunity with a strong team. If you're building something that matters — I’d love to hear from you.
+      </p>
+      <a href="cv_gavrilets.pdf" class="inline-block mt-4 px-4 py-2 bg-yellow-400 text-black font-semibold rounded hover:bg-yellow-300">My Resume</a>
+    </section>
+
+    <footer class="text-sm text-gray-500 dark:text-gray-400 mt-20">
+      <p>Updated by Bogdan Gavrilets 28/07/25. Built to be clear and remembered.</p>
+    </footer>
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      window.setLang = function(lang) {
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          const key = el.getAttribute('data-i18n');
+          if (translations[lang] && translations[lang][key]) {
+            el.innerText = translations[lang][key];
+          }
+        });
+      }
+
+      window.toggleTheme = function () {
+        document.documentElement.classList.toggle('dark');
+      }
+
+      const translations = {
+        en: {
+          intro_title: "Hi, I’m Bogdan.",
+          intro_text: "I’m currently looking for a meaningful full-time opportunity with a strong team. If you're building something that matters — I’d love to hear from you."
+        },
+        ru: {
+          intro_title: "Привет, я Богдан.",
+          intro_text: "Сейчас я ищу интересный проект и сильную команду для полноценной работы. Если вы создаёте что-то значимое — буду рад подключиться."
+        },
+        es: {
+          intro_title: "Hola, soy Bogdan.",
+          intro_text: "Actualmente busco un proyecto significativo y un equipo sólido para trabajar a tiempo completo. Si estás construyendo algo importante — me encantaría colaborar."
+        }
+      }
+    });
+  </script>
+</body>
+</html>
