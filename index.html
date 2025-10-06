@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="shortcut icon" href="favicon.png">
-  <title>Bogdan Gavrilets AI/Digital | Consulting/Mentoring</title>
+  <link rel="shortcut icon" href="favicon.png">
+  <title>Bogdan Gavrilets | AI & Digital Strategy</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
     :root {
@@ -22,92 +22,87 @@
     .lang-switcher button {
       margin-right: 0.5rem;
     }
+    .accent {
+      background-color: #facc15;
+      color: #111;
+    }
   </style>
 </head>
+
 <body class="transition-colors duration-300">
   <main class="max-w-3xl mx-auto py-12 px-4">
-    <div class="flex justify-between items-center mb-6 flex-wrap gap-2">
-      <div class="text-xl font-bold">Bogdan Gavrilets - AI/Digital | Consulting/Mentoring</div>
+    <header class="flex justify-between items-center mb-6 flex-wrap gap-2">
+      <h1 class="text-xl font-bold">Bogdan Gavrilets — AI & Digital Strategy</h1>
       <div class="lang-switcher text-sm flex items-center space-x-1">
         <button onclick="setLang('en')">EN</button>
         <button onclick="setLang('es')">ES</button>
         <button onclick="setLang('ru')">RU</button>
         <button onclick="toggleTheme()">🌗</button>
       </div>
-    </div>
+    </header>
 
     <section id="intro" class="mb-12">
-      <h1 class="text-3xl font-bold mb-4" data-i18n="intro_title">I know how to build systems from scratch. My experience spans IT, AI, startups, and leading teams in uncertain environments. A strategist, a techie, and a communicator — all in one.</h1>
+      <h2 class="text-3xl font-bold mb-4" data-i18n="intro_title">
+        I build systems from zero and make ideas work.
+      </h2>
 
       <p class="text-lg mb-4" data-i18n="intro_text">
-        I’ve been working for over 5 years on digital projects at the intersection of management, content, and technology.
+        My background spans AI, IT, startups, and leadership in unpredictable environments. 
+        I’ve spent over five years developing digital products at the crossroads of management, content, and technology.
+        With roots in applied computer science, I combine structure, creativity, and strategic clarity. 
+        I apply AI tools daily, help others master them, and can independently guide a project — from concept to MVP.
       </p>
-      <p class="text-lg mb-4">
-        I understand marketing not just because I studied it, but because I’ve applied it hands-on.
-      </p>
-      <p class="text-lg mb-4">
-        I have an unfinished degree in applied computer science and most of my professional experience comes from working in technical environments.
-      </p>
-      <p class="text-lg mb-4">
-        My strength lies in organizing work, planning, turning ideas into clear tasks, and helping teams deliver results.
-      </p>
-      <p class="text-lg mb-6">
-These days, much of what we build — from text and visuals to code — is done with the help of AI. I use these tools in real projects and also help others learn how to apply them, and can independently build a landing page, map out product logic, design tokenomics, run team meetings, and guide a project from idea to MVP.      </p>
 
       <div class="flex flex-wrap gap-4" id="action-buttons">
-        <a href="gavrilets_cv.pdf" class="px-4 py-2 bg-yellow-400 text-black font-semibold rounded hover:bg-yellow-300" data-i18n-btn="resume">My Resume</a>
-        <a href="mailto:bo.gavriles@gmail.com" class="px-4 py-2 bg-yellow-400 text-black font-semibold rounded hover:bg-yellow-300" data-i18n-btn="email">bo.gavriles@gmail.com</a>
-        <a href="https://calendly.com/bo-gavriles" class="px-4 py-2 bg-yellow-400 text-black font-semibold rounded hover:bg-yellow-300" data-i18n-btn="book">Book a meeting</a>
+        <a href="gavrilets_cv.pdf" class="px-4 py-2 accent font-semibold rounded hover:bg-yellow-300" data-i18n-btn="resume">Resume</a>
+        <a href="mailto:bo.gavriles@gmail.com" class="px-4 py-2 accent font-semibold rounded hover:bg-yellow-300" data-i18n-btn="email">Contact</a>
+        <a href="https://calendly.com/bo-gavriles" class="px-4 py-2 accent font-semibold rounded hover:bg-yellow-300" data-i18n-btn="book">Book a Meeting</a>
       </div>
     </section>
 
     <footer class="text-sm text-gray-500 dark:text-gray-400 mt-20 flex flex-col items-start gap-4">
-      <p>Updated by Bogdan Gavrilets 01/08/25. Built to be clear and remembered.</p>
+      <p>Updated by Bogdan Gavrilets — 01/08/25. Built to be clear and remembered.</p>
       <div class="flex gap-4">
         <a href="https://t.me/gavriles" class="hover:underline text-blue-500">Telegram</a>
-        <a href="mailto:bo.gavriles@gmail.com" class="hover:underline text-blue-500">bo.gavriles@gmail.com</a>
-        <a href="https://linkedin.com/in/bogdan-gavrilets" class="hover:underline text-blue-500">LinkedIn (Just for watch, Not available to respond)</a>
+        <a href="mailto:bo.gavriles@gmail.com" class="hover:underline text-blue-500">Email</a>
+        <a href="https://linkedin.com/in/bogdan-gavrilets" class="hover:underline text-blue-500">LinkedIn (read-only)</a>
       </div>
     </footer>
   </main>
 
   <script>
     const translations = {
-  en: {
-    intro_title: "I know how to build systems from scratch. My experience spans IT, AI, startups, and leading teams in uncertain environments. A strategist, a techie, and a communicator — all in one.",
-    intro_text: "I’ve been working for over 5 years on digital projects at the intersection of management, content, and technology. I understand marketing not just because I studied it, but because I’ve applied it hands-on. I have an unfinished degree in applied computer science and most of my professional experience comes from working in technical environments. My strength lies in organizing work, planning, turning ideas into clear tasks, and helping teams deliver results. These days, much of what we build — from text and visuals to code — is done with the help of AI. I use these tools in real projects and also help others learn how to apply them, and can independently build a landing page, map out product logic, design tokenomics, run team meetings, and guide a project from idea to MVP.",
-    resume: "My Resume",
-    email: "bo.gavriles@gmail.com",
-    book: "Book a meeting"
-  },
-  ru: {
-    intro_title: "Я знаю, как строить системы с нуля. Мой опыт охватывает IT, ИИ, стартапы и управление командами в условиях неопределённости. Стратег, технарь и коммуникатор — всё в одном.",
-    intro_text: "Более 5 лет я работаю над цифровыми проектами на стыке управления, контента и технологий. Я понимаю маркетинг не потому, что изучал его, а потому что применял на практике. У меня незаконченное образование по прикладной информатике, а основной профессиональный опыт я получил в технической среде. Моя сильная сторона — организация работы, планирование, превращение идей в чёткие задачи и помощь командам в достижении результата. Сегодня многое — от текста и визуалов до кода — создаётся с помощью ИИ. Я использую эти инструменты в реальных проектах, обучаю других применять их и могу самостоятельно собрать лендинг, продумать логику продукта, спроектировать токеномику, провести командные встречи и довести проект от идеи до MVP.",
-    resume: "Моё резюме",
-    email: "bo.gavriles@gmail.com",
-    book: "Назначить встречу"
-  },
-  es: {
-    intro_title: "Sé cómo construir sistemas desde cero. Mi experiencia abarca IT, inteligencia artificial, startups y la gestión de equipos en entornos inciertos. Estratega, técnico y comunicador en una sola persona.",
-    intro_text: "Llevo más de 5 años trabajando en proyectos digitales en la intersección de la gestión, el contenido y la tecnología. Entiendo el marketing no solo porque lo estudié, sino porque lo he aplicado en la práctica. Tengo estudios incompletos en informática aplicada, y la mayor parte de mi experiencia profesional proviene de entornos técnicos. Mi fortaleza está en organizar el trabajo, planificar, convertir ideas en tareas claras y ayudar a los equipos a obtener resultados. Hoy en día, gran parte de lo que construimos —desde textos y visuales hasta código— se realiza con ayuda de la IA. Utilizo estas herramientas en proyectos reales, enseño a otros cómo aplicarlas, y soy capaz de construir una landing page, diseñar la lógica del producto, crear la tokenómica, dirigir reuniones de equipo y llevar un proyecto desde la idea hasta el MVP.",
-    resume: "Mi Currículum",
-    email: "bo.gavriles@gmail.com",
-    book: "Reservar reunión"
-  }
-};
+      en: {
+        intro_title: "I build systems from zero and make ideas work.",
+        intro_text: "My background spans AI, IT, startups, and leadership in unpredictable environments. I’ve spent over five years developing digital products at the crossroads of management, content, and technology. With roots in applied computer science, I combine structure, creativity, and strategic clarity. I apply AI tools daily, help others master them, and can independently guide a project — from concept to MVP.",
+        resume: "Resume",
+        email: "Contact",
+        book: "Book a Meeting"
+      },
+      ru: {
+        intro_title: "Я создаю системы с нуля и воплощаю идеи в работающие проекты.",
+        intro_text: "Мой опыт охватывает AI, IT, стартапы и управление командами в неопределённых условиях. Более 5 лет я развиваю цифровые продукты на стыке менеджмента, контента и технологий. На базе прикладной информатики я соединяю структуру, креатив и стратегическое мышление. Ежедневно применяю инструменты ИИ, обучаю других и веду проекты от идеи до MVP.",
+        resume: "Резюме",
+        email: "Связаться",
+        book: "Назначить встречу"
+      },
+      es: {
+        intro_title: "Construyo sistemas desde cero y convierto ideas en resultados.",
+        intro_text: "Mi experiencia abarca IA, IT, startups y liderazgo en entornos impredecibles. Llevo más de cinco años desarrollando productos digitales en la intersección de la gestión, el contenido y la tecnología. Con base en la informática aplicada, combino estructura, creatividad y visión estratégica. Uso herramientas de IA a diario, enseño a aplicarlas y puedo guiar un proyecto desde la idea hasta el MVP.",
+        resume: "Currículum",
+        email: "Contacto",
+        book: "Reservar reunión"
+      }
+    };
 
     function setLang(lang) {
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
-        if (translations[lang] && translations[lang][key]) {
-          el.innerText = translations[lang][key];
-        }
+        if (translations[lang]?.[key]) el.innerText = translations[lang][key];
       });
       document.querySelectorAll('[data-i18n-btn]').forEach(el => {
         const key = el.getAttribute('data-i18n-btn');
-        if (translations[lang] && translations[lang][key]) {
-          el.innerText = translations[lang][key];
-        }
+        if (translations[lang]?.[key]) el.innerText = translations[lang][key];
       });
     }
 
