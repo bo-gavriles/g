@@ -4,156 +4,245 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Bogdan Gavrilets — Creative Producer & Screenwriter/Project Manager & Product Lead</title>
-  <!-- Tailwind + Font Awesome + Google Fonts -->
+  <!-- Tailwind + Font Awesome + Google Fonts (тонкие вытянутые строгие буквы) -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     * {
       transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
     }
+    /* старый нью-йорк таймс стиль: чёткие линии, строгие пропорции, чёрный/белый/серый */
     body {
-      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, sans-serif;
-      background: #faf9f6;
-      color: #111827;
+      font-family: 'Inter', 'Helvetica Neue', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #ffffff;
+      color: #1a1a1a;
+      font-weight: 400;
+      letter-spacing: -0.01em;
     }
     html.dark body {
-      background: #05060a;
-      color: #eef2ff;
+      background: #0a0a0a;
+      color: #e8e8e8;
     }
-    /* modern card style with elevated contrast */
+    /* тонкие вытянутые буквы — строгие засечки и чистые линии */
+    h1, h2, h3, .font-bold, .font-extrabold {
+      font-family: 'Inter', 'Helvetica Neue', sans-serif;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
     .card {
       background: #ffffff;
-      border-radius: 1.75rem;
+      border-radius: 0px;
       transition: all 0.2s;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.03), 0 2px 6px rgba(0,0,0,0.05);
-      border: 1px solid rgba(0,0,0,0.02);
+      box-shadow: none;
+      border: 1px solid #e5e5e5;
     }
     html.dark .card {
-      background: #11161f;
-      border: 1px solid rgba(255,255,255,0.04);
-      box-shadow: 0 20px 35px -10px rgba(0,0,0,0.5);
+      background: #111111;
+      border: 1px solid #2a2a2a;
+      box-shadow: none;
     }
-    /* vibrant accent palette: warm amber & deep indigo */
+    /* строгий акцент — только чёрный и белый */
     .accent-bg {
-      background: linear-gradient(105deg, #f59e0b 0%, #d97706 100%);
-      color: #0c0a0a;
-      font-weight: 700;
-      box-shadow: 0 4px 10px rgba(245,158,11,0.25);
+      background: #000000;
+      color: #ffffff;
+      font-weight: 600;
+      border: 1px solid #000000;
+      border-radius: 0px;
+      transition: all 0.2s;
     }
     .accent-bg:hover {
-      background: linear-gradient(105deg, #fbbf24 0%, #f59e0b 100%);
-      transform: translateY(-2px);
-      box-shadow: 0 12px 20px -8px rgba(245,158,11,0.4);
+      background: #2c2c2c;
+      transform: translateY(-1px);
+      border-color: #2c2c2c;
+    }
+    html.dark .accent-bg {
+      background: #ffffff;
+      color: #000000;
+      border: 1px solid #ffffff;
+    }
+    html.dark .accent-bg:hover {
+      background: #cccccc;
+      color: #000000;
     }
     .tag {
-      background: #f1f5f9;
-      color: #0f172a;
-      border-radius: 40px;
+      background: #f4f4f4;
+      color: #1a1a1a;
+      border-radius: 0px;
       padding: 0.25rem 1rem;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.01em;
-      border: 1px solid #e2e8f0;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      border: 1px solid #dddddd;
+      text-transform: uppercase;
     }
     html.dark .tag {
-      background: #1e293b;
-      color: #e2e8f0;
-      border-color: #334155;
+      background: #1f1f1f;
+      color: #dddddd;
+      border-color: #333333;
     }
     .skill-level {
-      background: #fef9e3;
-      border-left: 4px solid #f59e0b;
+      background: #f9f9f9;
+      border-left: 3px solid #000000;
     }
     html.dark .skill-level {
-      background: #1f2a3e;
-      border-left-color: #fbbf24;
+      background: #141414;
+      border-left-color: #ffffff;
     }
     hr {
-      border-color: #e9eef3;
+      border-color: #eaeaea;
     }
     html.dark hr {
-      border-color: #1e293b;
+      border-color: #2a2a2a;
     }
     .job-badge {
-      background: #fffbeb;
-      color: #b45309;
+      background: #f0f0f0;
+      color: #111111;
       font-weight: 600;
-      border-radius: 2rem;
-      font-size: 0.75rem;
+      border-radius: 0px;
+      font-size: 0.7rem;
+      border: 1px solid #cccccc;
+      letter-spacing: 0.02em;
     }
     html.dark .job-badge {
-      background: #2d2a1e;
-      color: #fcd34d;
+      background: #1f1f1f;
+      color: #e0e0e0;
+      border-color: #3a3a3a;
     }
     a {
       transition: all 0.2s;
+      color: #111111;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
     }
     a:hover {
-      opacity: 0.85;
-      color: #f59e0b;
+      color: #555555;
+      border-bottom: 1px solid #999999;
+    }
+    html.dark a {
+      color: #dddddd;
+    }
+    html.dark a:hover {
+      color: #ffffff;
+      border-bottom-color: #777777;
     }
     .lang-switcher button, .theme-btn {
       background: #ffffff;
-      border: 1px solid #e2e8f0;
+      border: 1px solid #c0c0c0;
       padding: 0.3rem 1rem;
-      border-radius: 2rem;
-      font-weight: 600;
-      font-size: 0.8rem;
+      border-radius: 0px;
+      font-weight: 500;
+      font-size: 0.75rem;
       cursor: pointer;
-      color: #1e293b;
+      color: #1a1a1a;
       transition: all 0.2s;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
     }
     html.dark .lang-switcher button, html.dark .theme-btn {
-      background: #1e293b;
-      border-color: #334155;
-      color: #f1f5f9;
+      background: #1a1a1a;
+      border-color: #444444;
+      color: #e0e0e0;
     }
     .lang-switcher button.active {
-      background: #f59e0b;
-      color: #0f172a;
-      border-color: #f59e0b;
-      box-shadow: 0 2px 6px rgba(245,158,11,0.3);
+      background: #000000;
+      color: #ffffff;
+      border-color: #000000;
+    }
+    html.dark .lang-switcher button.active {
+      background: #ffffff;
+      color: #000000;
+      border-color: #ffffff;
     }
     .contact-icon {
       width: 34px;
       text-align: center;
     }
-    /* highlight for salary and key info */
+    /* строгий контраст для зарплаты */
     .highlight-salary {
-      background: linear-gradient(120deg, #fef3c7 0%, #fde68a 100%);
-      padding: 0.2rem 1rem;
-      border-radius: 60px;
+      background: #000000;
+      padding: 0.2rem 1.2rem;
       display: inline-block;
-      color: #78350f;
+      color: #ffffff;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      border: none;
     }
     html.dark .highlight-salary {
-      background: #2d2a1e;
-      color: #fde68a;
-      box-shadow: inset 0 0 0 1px #f59e0b30;
+      background: #ffffff;
+      color: #000000;
     }
     .portfolio-card {
-      background: #fefcf5;
+      background: #fdfdfd;
       transition: 0.1s;
+      border: 1px solid #eaeaea;
     }
     html.dark .portfolio-card {
-      background: #0f141e;
-      border: 1px solid #252e3f;
+      background: #0f0f0f;
+      border: 1px solid #2a2a2a;
     }
+    /* никаких градиентов, только чёрный/белый/серый */
     .text-gradient {
-      background: linear-gradient(135deg, #f59e0b, #ea580c);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
+      color: #000000;
+      background: none;
+      -webkit-background-clip: unset;
+      background-clip: unset;
+    }
+    html.dark .text-gradient {
+      color: #ffffff;
+    }
+    /* классическая линия газеты */
+    .news-rule {
+      border-top: 1px solid #cccccc;
+      width: 100%;
+      margin: 0.5rem 0 1rem 0;
+    }
+    html.dark .news-rule {
+      border-top-color: #333333;
+    }
+    i, .fas, .fab {
+      color: #2c2c2c;
+    }
+    html.dark i, html.dark .fas, html.dark .fab {
+      color: #b0b0b0;
+    }
+    button i, .theme-btn i {
+      color: currentColor;
+    }
+    /* строгая типографика: тонкие линии, чёткость */
+    .border-b-2 {
+      border-bottom-width: 1px;
+    }
+    .border-amber-300, .border-amber-100, .border-amber-700, .border-amber-900 {
+      border-color: #cccccc !important;
+    }
+    .bg-amber-50, .bg-amber-100, .bg-amber-950\/20 {
+      background-color: #f5f5f5 !important;
+    }
+    .text-amber-500, .text-amber-600, .text-amber-700, .text-amber-800 {
+      color: #1a1a1a !important;
+    }
+    html.dark .text-amber-500, html.dark .text-amber-600, html.dark .text-amber-700, html.dark .text-amber-800 {
+      color: #e0e0e0 !important;
+    }
+    .hover\:text-amber-600:hover {
+      color: #555555 !important;
+    }
+    /* настройка карточек и линий */
+    .border-l-2 {
+      border-left-width: 1px;
+    }
+    .border-amber-300\/70 {
+      border-color: #d4d4d4 !important;
     }
   </style>
 </head>
 <body class="antialiased">
   <main class="max-w-4xl mx-auto px-4 sm:px-6 py-8 md:py-12">
-    <!-- header with lang & theme buttons (enhanced contrast) -->
-    <div class="flex flex-wrap justify-between items-center gap-4 mb-10">
+    <!-- header с lang & theme - строгий газетный стиль -->
+    <div class="flex flex-wrap justify-between items-center gap-4 mb-10 pb-2 border-b border-gray-300 dark:border-gray-700">
       <div>
-        <h1 class="text-2xl md:text-3xl font-extrabold tracking-tight"><span class="text-gradient">Bogdan Gavrilets</span></h1>
-        <p class="text-gray-600 dark:text-gray-400 text-sm mt-1 font-medium" data-i18n="header_subtitle">Creative Producer · Screenwriter · Project Manager · Product Lead · AI & Digital Strategy</p>
+        <h1 class="text-2xl md:text-4xl font-extrabold tracking-tight"><span class="text-gradient">Bogdan Gavrilets</span></h1>
+        <p class="text-gray-700 dark:text-gray-400 text-sm mt-1 font-medium uppercase tracking-wide" data-i18n="header_subtitle">Creative Producer · Screenwriter · Project Manager · Product Lead · AI & Digital Strategy</p>
       </div>
       <div class="lang-switcher flex items-center gap-2 flex-wrap">
         <button onclick="setLang('ru')" id="lang-ru" class="active">RU</button>
@@ -163,37 +252,37 @@
       </div>
     </div>
 
-    <!-- HERO + контакты + зарплата с улучшенным контрастом -->
+    <!-- HERO + контакты + зарплата — чёрно-белый контраст -->
     <div class="card p-6 md:p-8 mb-8">
       <div class="flex flex-col md:flex-row justify-between gap-6">
         <div class="flex-1">
-          <div class="inline-flex items-center gap-1 bg-amber-100 dark:bg-amber-900/60 text-amber-800 dark:text-amber-200 text-sm font-bold px-4 py-1.5 rounded-full mb-3" data-i18n="desired_role">Руководитель проекта</div>
+          <div class="inline-flex items-center gap-1 bg-gray-100 dark:bg-gray-800 text-black dark:text-white text-sm font-bold px-4 py-1.5 mb-3 border border-gray-300 dark:border-gray-600" data-i18n="desired_role">Руководитель проекта</div>
           <div class="flex flex-wrap gap-3 items-center mb-4">
             <span class="highlight-salary text-3xl font-black tracking-tight" data-i18n="salary">310 000 ₽</span>
-            <span class="text-gray-500 dark:text-gray-400 text-sm font-medium" data-i18n="salary_note">на руки</span>
+            <span class="text-gray-600 dark:text-gray-400 text-sm font-medium" data-i18n="salary_note">на руки</span>
           </div>
           <div class="flex flex-wrap gap-2 mt-2">
-            <span class="tag"><i class="fas fa-building mr-1 text-amber-600 dark:text-amber-400"></i> <span data-i18n="job_type">Постоянная работа</span></span>
-            <span class="tag"><i class="fas fa-laptop-house mr-1 text-amber-600 dark:text-amber-400"></i> <span data-i18n="work_format">Удалённо / Гибрид / Офис</span></span>
-            <span class="tag"><i class="fas fa-plane mr-1 text-amber-600 dark:text-amber-400"></i> <span data-i18n="business_trips">Командировки: готов(а)</span></span>
+            <span class="tag"><i class="fas fa-building mr-1 text-black dark:text-white"></i> <span data-i18n="job_type">Постоянная работа</span></span>
+            <span class="tag"><i class="fas fa-laptop-house mr-1 text-black dark:text-white"></i> <span data-i18n="work_format">Удалённо / Гибрид / Офис</span></span>
+            <span class="tag"><i class="fas fa-plane mr-1 text-black dark:text-white"></i> <span data-i18n="business_trips">Командировки: готов(а)</span></span>
           </div>
         </div>
-        <div class="border-l-2 border-amber-300 dark:border-amber-700/70 pl-5 min-w-[200px]">
-          <div class="text-sm uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-2 font-semibold"><i class="fas fa-phone-alt mr-2 text-amber-600"></i> <span data-i18n="preferred_contact">Предпочитаемый способ связи</span></div>
-          <div class="font-mono font-bold text-lg mb-1 text-gray-800 dark:text-gray-100">+7 992 348-17-91</div>
-          <div class="font-mono text-sm break-all text-gray-600 dark:text-gray-300">gavrda37@gmail.com</div>
+        <div class="border-l border-gray-400 dark:border-gray-600 pl-5 min-w-[200px]">
+          <div class="text-sm uppercase tracking-wider text-gray-600 dark:text-gray-400 mb-2 font-semibold"><i class="fas fa-phone-alt mr-2 text-black dark:text-white"></i> <span data-i18n="preferred_contact">Предпочитаемый способ связи</span></div>
+          <div class="font-mono font-bold text-lg mb-1 text-gray-900 dark:text-gray-100">+7 992 348-17-91</div>
+          <div class="font-mono text-sm break-all text-gray-700 dark:text-gray-300">gavrda37@gmail.com</div>
           <div class="mt-3 flex gap-4 text-sm">
-            <a href="https://t.me/bgavrilets" target="_blank" class="text-amber-700 dark:text-amber-400 hover:text-amber-500 font-medium"><i class="fab fa-telegram"></i> Telegram</a>
-            <a href="https://linkedin.com/in/bogdan-gavrilets" target="_blank" class="text-amber-700 dark:text-amber-400 hover:text-amber-500 font-medium"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            <a href="https://gavrilets.com" target="_blank" class="text-amber-700 dark:text-amber-400 hover:text-amber-500 font-medium"><i class="fas fa-globe"></i> gavrilets.com</a>
+            <a href="https://t.me/bgavrilets" target="_blank" class="font-medium">Telegram</a>
+            <a href="https://linkedin.com/in/bogdan-gavrilets" target="_blank" class="font-medium">LinkedIn</a>
+            <a href="https://gavrilets.com" target="_blank" class="font-medium">gavrilets.com</a>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- О себе + краткое введение (повышенная читаемость) -->
+    <!-- О себе + введение - только чёрный/серый -->
     <div class="card p-6 md:p-8 mb-8">
-      <h2 class="text-xl font-bold flex items-center gap-2 mb-4"><i class="fas fa-user-astronaut text-amber-500 text-2xl"></i> <span data-i18n="about_title" class="border-b-2 border-amber-300 pb-1 inline-block">О себе</span></h2>
+      <h2 class="text-xl font-bold flex items-center gap-2 mb-4 border-b border-gray-300 dark:border-gray-700 pb-2"><i class="fas fa-user-astronaut text-2xl text-black dark:text-white"></i> <span data-i18n="about_title" class="inline-block">О себе</span></h2>
       <p class="text-gray-800 dark:text-gray-200 leading-relaxed text-base" data-i18n="about_text">
         Продуктовый менеджер и основатель с международным опытом в финтехе, блокчейне и маркетплейсах. Недавно вернулся в Россию после глубокого погружения в латиноамериканский рынок. Нахожусь в активном поиске сильного проекта для долгосрочного сотрудничества, где смогу применить свой уникальный опыт. <br><br>
         <strong>Что я привношу в проект:</strong> глубокую экспертизу в запуске и масштабировании IT-продуктов, понимание глобальных рынков (СНГ, Латинская Америка, Европа), свободное владение русским, английским и испанским языками, опыт работы на стыке технологий и бизнеса — от стратегии до реализации. <br><br>
@@ -201,21 +290,21 @@
       </p>
     </div>
 
-    <!-- ОПЫТ РАБОТЫ (7 лет 9 месяцев) с улучшенными карточками -->
+    <!-- ОПЫТ РАБОТЫ (строгие карточки) -->
     <div class="mb-10">
-      <div class="flex items-center gap-3 mb-5">
-        <i class="fas fa-briefcase text-amber-500 text-2xl"></i>
+      <div class="flex items-center gap-3 mb-5 border-b border-gray-200 dark:border-gray-800 pb-2">
+        <i class="fas fa-briefcase text-2xl text-black dark:text-white"></i>
         <h2 class="text-2xl font-bold"><span data-i18n="exp_title">Опыт работы</span> <span class="text-base font-normal text-gray-500 dark:text-gray-400 ml-2">7 лет 9 месяцев</span></h2>
       </div>
       <div class="space-y-6">
         <!-- HIGLOBALDISTRIBUTIONJFEED LLC -->
-        <div class="card p-6 hover:shadow-md transition">
+        <div class="card p-6 transition">
           <div class="flex flex-wrap justify-between items-start gap-2 mb-2">
             <h3 class="text-xl font-bold text-gray-900 dark:text-white">"HIGLOBALDISTRIBUTIONJFEED" LLC (USA)</h3>
             <span class="job-badge text-sm px-3 py-1" data-i18n="duration_high">4 месяца</span>
           </div>
-          <p class="text-amber-700 dark:text-amber-400 font-semibold mb-3"><span data-i18n="job_high_title">Media Buyer / Сценарист / Креативный продюсер</span> <span class="text-sm font-normal text-gray-500 dark:text-gray-400">(Дек 2025 — Март 2026)</span></p>
-          <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1 text-sm md:text-base marker:text-amber-500">
+          <p class="text-gray-700 dark:text-gray-300 font-semibold mb-3"><span data-i18n="job_high_title">Media Buyer / Сценарист / Креативный продюсер</span> <span class="text-sm font-normal text-gray-500 dark:text-gray-400">(Дек 2025 — Март 2026)</span></p>
+          <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1 text-sm md:text-base marker:text-black dark:marker:text-white">
             <li data-i18n="high_desc1">Полный цикл продюсирования рекламных интеграций: стратегический подбор блогеров, переговоры и согласование бюджетов, написание сценариев (от драматургии до финальных реплик).</li>
             <li data-i18n="high_desc2">Создание креативных гипотез, адаптация сценариев под образ и стиль конкретных блогеров, контроль реализации на съемочной площадке и при монтаже.</li>
           </ul>
@@ -226,8 +315,8 @@
             <h3 class="text-xl font-bold text-gray-900 dark:text-white">Brega.app</h3>
             <span class="job-badge text-sm px-3 py-1" data-i18n="duration_brega">8 месяцев</span>
           </div>
-          <p class="text-amber-700 dark:text-amber-400 font-semibold mb-3"><span data-i18n="job_brega_title">Исполнительный директор (CEO)</span> <span class="text-sm font-normal text-gray-500 dark:text-gray-400">(Апр 2025 — Ноя 2025)</span></p>
-          <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1 marker:text-amber-500">
+          <p class="text-gray-700 dark:text-gray-300 font-semibold mb-3"><span data-i18n="job_brega_title">Исполнительный директор (CEO)</span> <span class="text-sm font-normal text-gray-500 dark:text-gray-400">(Апр 2025 — Ноя 2025)</span></p>
+          <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1 marker:text-black dark:marker:text-white">
             <li data-i18n="brega_desc1">Основал и разрабатывал стратегию маркетплейса Brega (соединение владельцев лодок с любителями морского отдыха, без посредников).</li>
             <li data-i18n="brega_desc2">Управление полным циклом разработки: от концепции и UX/UI до запуска и поддержки.</li>
             <li data-i18n="brega_desc3">Привлечение пользователей, удержание, формирование активного сообщества.</li>
@@ -240,8 +329,8 @@
             <h3 class="text-xl font-bold text-gray-900 dark:text-white">Bondah</h3>
             <span class="job-badge text-sm px-3 py-1" data-i18n="duration_bondah">1 год 4 месяца</span>
           </div>
-          <p class="text-amber-700 dark:text-amber-400 font-semibold mb-3"><span data-i18n="job_bondah_title">Менеджер продукта</span> <span class="text-sm font-normal">(Янв 2024 — Апр 2025)</span></p>
-          <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1 marker:text-amber-500">
+          <p class="text-gray-700 dark:text-gray-300 font-semibold mb-3"><span data-i18n="job_bondah_title">Менеджер продукта</span> <span class="text-sm font-normal">(Янв 2024 — Апр 2025)</span></p>
+          <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1 marker:text-black dark:marker:text-white">
             <li data-i18n="bondah_desc1">Центр финансовой аналитики. Разработка технической документации для блокчейн-проектов, обучение новых членов команды.</li>
             <li data-i18n="bondah_desc2">Руководство созданием продукта с фокусом на ИИ и блокчейн, координация кросс-функциональных команд.</li>
             <li data-i18n="bondah_desc3">Запуск на новые рынки, стратегии привлечения и удержания пользователей.</li>
@@ -253,8 +342,8 @@
             <h3 class="text-xl font-bold text-gray-900 dark:text-white">Crypto Logic Writer</h3>
             <span class="job-badge text-sm px-3 py-1" data-i18n="duration_crypto">6 месяцев</span>
           </div>
-          <p class="text-amber-700 dark:text-amber-400 font-semibold mb-3"><span data-i18n="job_crypto_title">Технический писатель</span> <span class="text-sm font-normal">(Июнь 2023 — Ноя 2023)</span></p>
-          <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 marker:text-amber-500">
+          <p class="text-gray-700 dark:text-gray-300 font-semibold mb-3"><span data-i18n="job_crypto_title">Технический писатель</span> <span class="text-sm font-normal">(Июнь 2023 — Ноя 2023)</span></p>
+          <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 marker:text-black dark:marker:text-white">
             <li data-i18n="crypto_desc1">Создание технической документации для блокчейн-проектов.</li>
             <li data-i18n="crypto_desc2">Разработка и оптимизация смарт-контрактов на Solidity.</li>
             <li data-i18n="crypto_desc3">Помощь новым членам команды в адаптации и вкладе в разработку.</li>
@@ -266,8 +355,8 @@
             <h3 class="text-xl font-bold text-gray-900 dark:text-white">Crypto Capital</h3>
             <span class="job-badge text-sm px-3 py-1" data-i18n="duration_cap">1 год 2 месяца</span>
           </div>
-          <p class="text-amber-700 dark:text-amber-400 font-semibold mb-3"><span data-i18n="job_cap_title">Менеджер продукта</span> <span class="text-sm font-normal">(Сен 2020 — Окт 2021)</span></p>
-          <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 marker:text-amber-500">
+          <p class="text-gray-700 dark:text-gray-300 font-semibold mb-3"><span data-i18n="job_cap_title">Менеджер продукта</span> <span class="text-sm font-normal">(Сен 2020 — Окт 2021)</span></p>
+          <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 marker:text-black dark:marker:text-white">
             <li data-i18n="cap_desc1">Управление кросс-функциональными командами, выстраивание коммуникаций между продажами, разработкой и стейкхолдерами.</li>
             <li data-i18n="cap_desc2">Стратегический маркетинг, повышение узнаваемости продукта.</li>
             <li data-i18n="cap_desc3">Полный цикл управления продуктом: от идеи до реализации.</li>
@@ -279,8 +368,8 @@
             <h3 class="text-xl font-bold text-gray-900 dark:text-white">"Точка Банк"</h3>
             <span class="job-badge text-sm px-3 py-1" data-i18n="duration_tbank">2 года 2 месяца</span>
           </div>
-          <p class="text-amber-700 dark:text-amber-400 font-semibold mb-3"><span data-i18n="job_tbank_title">Специалист по регистрации бизнеса</span> <span class="text-sm font-normal">(Авг 2018 — Сен 2020)</span></p>
-          <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 marker:text-amber-500">
+          <p class="text-gray-700 dark:text-gray-300 font-semibold mb-3"><span data-i18n="job_tbank_title">Специалист по регистрации бизнеса</span> <span class="text-sm font-normal">(Авг 2018 — Сен 2020)</span></p>
+          <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 marker:text-black dark:marker:text-white">
             <li data-i18n="tbank_desc1">Консультирование корпоративных клиентов в сфере финтеха и онлайн-банкинга.</li>
             <li data-i18n="tbank_desc2">Оптимизация процессов продаж с использованием Agile/Scrum.</li>
             <li data-i18n="tbank_desc3">Консультирование по комплаенсу и регуляторным требованиям.</li>
@@ -292,8 +381,8 @@
             <h3 class="text-xl font-bold text-gray-900 dark:text-white">Блокнот Онлайн</h3>
             <span class="job-badge text-sm px-3 py-1" data-i18n="duration_photo">1 год 9 месяцев</span>
           </div>
-          <p class="text-amber-700 dark:text-amber-400 font-semibold mb-3"><span data-i18n="job_photo_title">Фотограф и репортёр</span> <span class="text-sm font-normal">(Янв 2016 — Сен 2017)</span></p>
-          <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 marker:text-amber-500">
+          <p class="text-gray-700 dark:text-gray-300 font-semibold mb-3"><span data-i18n="job_photo_title">Фотограф и репортёр</span> <span class="text-sm font-normal">(Янв 2016 — Сен 2017)</span></p>
+          <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 marker:text-black dark:marker:text-white">
             <li data-i18n="photo_desc1">Освещение экстренных новостей и местных событий, фотодокументалистика для федеральных СМИ.</li>
             <li data-i18n="photo_desc2">Сотрудничество с редакцией в планировании контента.</li>
           </ul>
@@ -301,12 +390,12 @@
       </div>
     </div>
 
-    <!-- Навыки + образование с улучшенной цветовой дифференциацией -->
+    <!-- Навыки + образование - строгая сетка -->
     <div class="grid md:grid-cols-2 gap-6 mb-10">
       <div class="card p-6">
-        <h3 class="text-xl font-bold flex items-center gap-2 mb-4"><i class="fas fa-code-branch text-amber-500 text-xl"></i> <span data-i18n="skills_title">Навыки</span></h3>
-        <div class="mb-5 p-3 rounded-xl bg-amber-50 dark:bg-amber-950/20">
-          <p class="font-bold text-amber-800 dark:text-amber-300"><span data-i18n="advanced">Продвинутый уровень</span></p>
+        <h3 class="text-xl font-bold flex items-center gap-2 mb-4 border-b border-gray-200 dark:border-gray-800 pb-2"><i class="fas fa-code-branch text-xl text-black dark:text-white"></i> <span data-i18n="skills_title">Навыки</span></h3>
+        <div class="mb-5 p-3 bg-gray-50 dark:bg-gray-900/40 border-l-2 border-black dark:border-white">
+          <p class="font-bold text-black dark:text-white"><span data-i18n="advanced">Продвинутый уровень</span></p>
           <div class="flex flex-wrap gap-2 mt-2">
             <span class="tag" data-i18n="skill_startup">Start-up project</span>
             <span class="tag">GitHub</span>
@@ -314,8 +403,8 @@
             <span class="tag" data-i18n="skill_launch">Launching new products</span>
           </div>
         </div>
-        <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-900/40">
-          <p class="font-bold text-amber-800 dark:text-amber-300"><span data-i18n="intermediate">Средний уровень</span></p>
+        <div class="p-3 bg-gray-50 dark:bg-gray-900/40 border-l-2 border-black dark:border-white">
+          <p class="font-bold text-black dark:text-white"><span data-i18n="intermediate">Средний уровень</span></p>
           <div class="flex flex-wrap gap-2 mt-2">
             <span class="tag" data-i18n="skill_invest">Investment Project Analysis</span>
             <span class="tag">Figma</span>
@@ -323,8 +412,8 @@
         </div>
       </div>
       <div class="card p-6">
-        <h3 class="text-xl font-bold flex items-center gap-2 mb-4"><i class="fas fa-graduation-cap text-amber-500 text-xl"></i> <span data-i18n="education_title">Образование</span></h3>
-        <div class="mb-4 pb-2 border-b border-dashed border-gray-200 dark:border-gray-700">
+        <h3 class="text-xl font-bold flex items-center gap-2 mb-4 border-b border-gray-200 dark:border-gray-800 pb-2"><i class="fas fa-graduation-cap text-xl text-black dark:text-white"></i> <span data-i18n="education_title">Образование</span></h3>
+        <div class="mb-4 pb-2 border-b border-gray-200 dark:border-gray-700">
           <p class="font-bold text-gray-800 dark:text-white" data-i18n="edu_univ_name">Гуманитарный университет</p>
           <p class="text-sm text-gray-600 dark:text-gray-400" data-i18n="edu_univ_desc">Прикладная информатика · 2021 · Неоконченное высшее</p>
         </div>
@@ -332,31 +421,31 @@
           <p class="font-bold text-gray-800 dark:text-white" data-i18n="edu_college_name">Техникум по направлению "Маркетинг"</p>
           <p class="text-sm text-gray-600 dark:text-gray-400" data-i18n="edu_college_desc">Реклама (специалист по рекламе) · 2015 · Среднее специальное</p>
         </div>
-        <div class="mt-4 pt-3 border-t border-amber-200 dark:border-amber-800/40">
-          <p class="text-sm font-medium"><i class="fas fa-certificate text-amber-500 mr-2"></i> <span data-i18n="edu_cert">Agile Project Management — курсы по профессии «Руководитель проектов»</span></p>
+        <div class="mt-4 pt-3 border-t border-gray-300 dark:border-gray-700">
+          <p class="text-sm font-medium"><i class="fas fa-certificate text-black dark:text-white mr-2"></i> <span data-i18n="edu_cert">Agile Project Management — курсы по профессии «Руководитель проектов»</span></p>
         </div>
       </div>
     </div>
 
-    <!-- Портфолио / сценарная деятельность + кейсы с контрастными блоками -->
+    <!-- Портфолио / креативное продюсирование - монохромные блоки -->
     <div class="card p-6 mb-8">
-      <h2 class="text-xl font-bold flex items-center gap-2 mb-4"><i class="fas fa-video text-amber-500 text-2xl"></i> <span data-i18n="portfolio_title">Портфолио и креативное продюсирование</span></h2>
+      <h2 class="text-xl font-bold flex items-center gap-2 mb-4 border-b border-gray-200 dark:border-gray-800 pb-2"><i class="fas fa-video text-2xl text-black dark:text-white"></i> <span data-i18n="portfolio_title">Портфолио и креативное продюсирование</span></h2>
       <div class="space-y-4">
-        <div class="portfolio-card p-4 rounded-xl border border-amber-100 dark:border-amber-900/40">
-          <p class="font-bold text-gray-800 dark:text-gray-100"><i class="fab fa-youtube text-red-500 mr-2"></i> <span data-i18n="portfolio_case1_title">YouTube интеграция — легенды спорта</span></p>
+        <div class="portfolio-card p-4 border border-gray-200 dark:border-gray-800">
+          <p class="font-bold text-gray-800 dark:text-gray-100"><i class="fab fa-youtube text-black dark:text-white mr-2"></i> <span data-i18n="portfolio_case1_title">YouTube интеграция — легенды спорта</span></p>
           <p class="text-sm text-gray-700 dark:text-gray-300 mt-1" data-i18n="portfolio_case1_desc">Заключил партнёрское соглашение с каналом «Легенды спорта» и корректировал сценарий для маркетинговой интеграции. Снижение цены вставки на 60%.</p>
-          <a href="https://www.youtube.com/shorts/ZsYvqvW2DFY" target="_blank" class="text-amber-600 dark:text-amber-400 text-sm inline-flex items-center mt-2 font-semibold">🔗 <span data-i18n="watch_case">Смотреть кейс →</span></a>
+          <a href="https://www.youtube.com/shorts/ZsYvqvW2DFY" target="_blank" class="text-black dark:text-white text-sm inline-flex items-center mt-2 font-semibold border-b border-gray-400">🔗 <span data-i18n="watch_case">Смотреть кейс →</span></a>
         </div>
-        <div class="portfolio-card p-4 rounded-xl border border-amber-100 dark:border-amber-900/40">
+        <div class="portfolio-card p-4 border border-gray-200 dark:border-gray-800">
           <p class="font-bold text-gray-800 dark:text-gray-100"><i class="fab fa-tiktok text-black dark:text-white mr-2"></i> <span data-i18n="portfolio_case2_title">TikTok креатив</span></p>
-          <a href="http://tiktok.com/@brickplate/video/7598206646837333270" target="_blank" class="text-amber-600 dark:text-amber-400 text-sm break-all">tiktok.com/@brickplate/video/7598206646837333270</a>
+          <a href="http://tiktok.com/@brickplate/video/7598206646837333270" target="_blank" class="text-black dark:text-gray-300 text-sm break-all border-b border-gray-400">tiktok.com/@brickplate/video/7598206646837333270</a>
           <p class="text-sm mt-1 text-gray-600 dark:text-gray-400" data-i18n="portfolio_case2_desc">Работа над креативом и сценариями под блогера.</p>
         </div>
-        <div class="portfolio-card p-4 rounded-xl border border-amber-100 dark:border-amber-900/40">
-          <p class="font-bold text-gray-800 dark:text-gray-100"><i class="fab fa-youtube text-red-500 mr-2"></i> <span data-i18n="portfolio_case3_title">Рекламное продюсирование блогера - по заказу рекламы или партнерствам писать по контактам на gavrilets.com</span></p>
+        <div class="portfolio-card p-4 border border-gray-200 dark:border-gray-800">
+          <p class="font-bold text-gray-800 dark:text-gray-100"><i class="fab fa-youtube text-black dark:text-white mr-2"></i> <span data-i18n="portfolio_case3_title">Рекламное продюсирование блогера - по заказу рекламы или партнерствам писать по контактам на gavrilets.com</span></p>
           <div class="flex flex-wrap gap-3 mt-1">
-            <a href="https://www.youtube.com/@BrickPlate777" target="_blank" class="text-amber-600 dark:text-amber-400 text-sm">BrickPlate YouTube</a>
-            <a href="https://www.tiktok.com/@brickplate7" target="_blank" class="text-amber-600 dark:text-amber-400 text-sm">BrickPlate TikTok</a>
+            <a href="https://www.youtube.com/@BrickPlate777" target="_blank" class="text-black dark:text-white text-sm border-b border-gray-400">BrickPlate YouTube</a>
+            <a href="https://www.tiktok.com/@brickplate7" target="_blank" class="text-black dark:text-white text-sm border-b border-gray-400">BrickPlate TikTok</a>
           </div>
         </div>
       </div>
@@ -364,16 +453,16 @@
 
     <!-- Action buttons -->
     <div class="flex flex-wrap gap-5 justify-start mt-6 mb-10">
-      <a href="mailto:gavrda37@gmail.com" class="accent-bg px-7 py-3 font-bold rounded-full shadow-md transition flex items-center gap-2"><i class="fas fa-envelope"></i> <span data-i18n="email">Написать</span></a>
+      <a href="mailto:gavrda37@gmail.com" class="accent-bg px-7 py-3 font-bold shadow-none transition flex items-center gap-2"><i class="fas fa-envelope text-white dark:text-black"></i> <span data-i18n="email">Написать</span></a>
     </div>
 
-    <footer class="text-sm text-gray-500 dark:text-gray-500 border-t border-gray-200 dark:border-gray-800 pt-8 mt-4 flex flex-col md:flex-row justify-between items-start gap-3">
+    <footer class="text-sm text-gray-500 dark:text-gray-500 border-t border-gray-300 dark:border-gray-800 pt-8 mt-4 flex flex-col md:flex-row justify-between items-start gap-3">
       <p data-i18n="footer_updated">Updated by Bogdan Gavrilets — 03/04/26. Built to be clear and remembered.</p>
       <div class="flex gap-5">
-        <a href="https://t.me/bgavrilets" class="hover:text-amber-600"><i class="fab fa-telegram"></i> Telegram</a>
-        <a href="mailto:gavrda37@gmail.com" class="hover:text-amber-600">Email</a>
-        <a href="https://linkedin.com/in/bogdan-gavrilets" class="hover:text-amber-600">LinkedIn</a>
-        <a href="https://gavrilets.com" class="hover:text-amber-600">gavrilets.com</a>
+        <a href="https://t.me/bgavrilets" class="hover:text-black dark:hover:text-white">Telegram</a>
+        <a href="mailto:gavrda37@gmail.com" class="hover:text-black dark:hover:text-white">Email</a>
+        <a href="https://linkedin.com/in/bogdan-gavrilets" class="hover:text-black dark:hover:text-white">LinkedIn</a>
+        <a href="https://gavrilets.com" class="hover:text-black dark:hover:text-white">gavrilets.com</a>
       </div>
     </footer>
   </main>
@@ -605,9 +694,9 @@
         }
       });
       document.querySelectorAll('.lang-switcher button').forEach(btn => {
-        btn.classList.remove('active', 'bg-yellow-400', 'text-black');
+        btn.classList.remove('active');
         if (btn.innerText.toLowerCase() === lang || btn.innerText.toLowerCase() === lang.toUpperCase()) {
-          btn.classList.add('active', 'bg-yellow-400', 'text-black');
+          btn.classList.add('active');
         }
       });
     }
