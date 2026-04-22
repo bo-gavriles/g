@@ -3,15 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Bogdan Gavrilets — Creative Producer & Screenwriter/Project Manager & Product Lead</title>
-  <!-- Tailwind + Font Awesome + Google Fonts (тонкие вытянутые строгие буквы) -->
+  <title>Bogdan Gavrilets — Creative Producer & Screenwriter / Project Manager & Product Lead</title>
+  <!-- Tailwind + Font Awesome + Google Fonts -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     * {
       transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
     }
-    /* старый нью-йорк таймс стиль: чёткие линии, строгие пропорции, чёрный/белый/серый */
     body {
       font-family: 'Inter', 'Helvetica Neue', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
       background: #ffffff;
@@ -23,7 +22,6 @@
       background: #0a0a0a;
       color: #e8e8e8;
     }
-    /* тонкие вытянутые буквы — строгие засечки и чистые линии */
     h1, h2, h3, .font-bold, .font-extrabold {
       font-family: 'Inter', 'Helvetica Neue', sans-serif;
       font-weight: 600;
@@ -41,7 +39,6 @@
       border: 1px solid #2a2a2a;
       box-shadow: none;
     }
-    /* строгий акцент — только чёрный и белый */
     .accent-bg {
       background: #000000;
       color: #ffffff;
@@ -79,20 +76,6 @@
       background: #1f1f1f;
       color: #dddddd;
       border-color: #333333;
-    }
-    .skill-level {
-      background: #f9f9f9;
-      border-left: 3px solid #000000;
-    }
-    html.dark .skill-level {
-      background: #141414;
-      border-left-color: #ffffff;
-    }
-    hr {
-      border-color: #eaeaea;
-    }
-    html.dark hr {
-      border-color: #2a2a2a;
     }
     .job-badge {
       background: #f0f0f0;
@@ -153,11 +136,6 @@
       color: #000000;
       border-color: #ffffff;
     }
-    .contact-icon {
-      width: 34px;
-      text-align: center;
-    }
-    /* строгий контраст для зарплаты */
     .highlight-salary {
       background: #000000;
       padding: 0.2rem 1.2rem;
@@ -180,7 +158,6 @@
       background: #0f0f0f;
       border: 1px solid #2a2a2a;
     }
-    /* никаких градиентов, только чёрный/белый/серый */
     .text-gradient {
       color: #000000;
       background: none;
@@ -189,15 +166,6 @@
     }
     html.dark .text-gradient {
       color: #ffffff;
-    }
-    /* классическая линия газеты */
-    .news-rule {
-      border-top: 1px solid #cccccc;
-      width: 100%;
-      margin: 0.5rem 0 1rem 0;
-    }
-    html.dark .news-rule {
-      border-top-color: #333333;
     }
     i, .fas, .fab {
       color: #2c2c2c;
@@ -208,7 +176,6 @@
     button i, .theme-btn i {
       color: currentColor;
     }
-    /* строгая типографика: тонкие линии, чёткость */
     .border-b-2 {
       border-bottom-width: 1px;
     }
@@ -227,7 +194,6 @@
     .hover\:text-amber-600:hover {
       color: #555555 !important;
     }
-    /* настройка карточек и линий */
     .border-l-2 {
       border-left-width: 1px;
     }
@@ -238,7 +204,7 @@
 </head>
 <body class="antialiased">
   <main class="max-w-4xl mx-auto px-4 sm:px-6 py-8 md:py-12">
-    <!-- header с lang & theme - строгий газетный стиль -->
+    <!-- header -->
     <div class="flex flex-wrap justify-between items-center gap-4 mb-10 pb-2 border-b border-gray-300 dark:border-gray-700">
       <div>
         <h1 class="text-2xl md:text-4xl font-extrabold tracking-tight"><span class="text-gradient">Bogdan Gavrilets</span></h1>
@@ -252,11 +218,11 @@
       </div>
     </div>
 
-    <!-- HERO + контакты + зарплата — чёрно-белый контраст -->
+    <!-- HERO -->
     <div class="card p-6 md:p-8 mb-8">
       <div class="flex flex-col md:flex-row justify-between gap-6">
         <div class="flex-1">
-          <div class="inline-flex items-center gap-1 bg-gray-100 dark:bg-gray-800 text-black dark:text-white text-sm font-bold px-4 py-1.5 mb-3 border border-gray-300 dark:border-gray-600" data-i18n="desired_role">Руководитель проекта</div>
+          <div class="inline-flex items-center gap-1 bg-gray-100 dark:bg-gray-800 text-black dark:text-white text-sm font-bold px-4 py-1.5 mb-3 border border-gray-300 dark:border-gray-600" data-i18n="desired_role">Руководитель проекта / Creative Producer</div>
           <div class="flex flex-wrap gap-3 items-center mb-4">
             <span class="highlight-salary text-3xl font-black tracking-tight" data-i18n="salary">310 000 ₽</span>
             <span class="text-gray-600 dark:text-gray-400 text-sm font-medium" data-i18n="salary_note">на руки</span>
@@ -280,25 +246,24 @@
       </div>
     </div>
 
-    <!-- О себе + введение - только чёрный/серый -->
+    <!-- О себе -->
     <div class="card p-6 md:p-8 mb-8">
       <h2 class="text-xl font-bold flex items-center gap-2 mb-4 border-b border-gray-300 dark:border-gray-700 pb-2"><i class="fas fa-user-astronaut text-2xl text-black dark:text-white"></i> <span data-i18n="about_title" class="inline-block">О себе</span></h2>
       <p class="text-gray-800 dark:text-gray-200 leading-relaxed text-base" data-i18n="about_text">
-        Сценарист с любовью к своему делу и знанием испанского и английского языков. Написание концептов, диалогов и раскдровки в основном для коротких видеороликов с упором на марекинг и нативные рекламные интерации, по необходимости. С большим трепетом отношусь к проектам художественного формата.
-        В Прошлом продуктовый менеджер и основатель с международным опытом в финтехе, блокчейне и маркетплейсах. Недавно вернулся в Россию после глубокого погружения в латиноамериканский рынок. Нахожусь в активном поиске сильного проекта для долгосрочного сотрудничества, где смогу применить свой уникальный опыт. <br><br>
-        <strong>Что я привношу в проект:</strong> глубокую экспертизу в запуске и масштабировании, понимание глобальных рынков (СНГ, Латинская Америка, Европа), свободное владение русским, английским и испанским языками, опыт работы на стыке последних технологи — от стратегии до реализации. <br><br>
-        Моя специализация: концепты требующие глубокой проработки и стратегического видения.
+        Сценарист с любовью к своему делу и знанием испанского и английского языков. Написание концептов, диалогов и раскадровки в основном для коротких видеороликов с упором на маркетинг и нативные рекламные интеграции, по необходимости. С большим трепетом отношусь к проектам художественного формата.
+        В прошлом продуктовый менеджер и основатель с международным опытом в финтехе, блокчейне и маркетплейсах. Недавно вернулся в Россию после глубокого погружения в латиноамериканский рынок. Нахожусь в активном поиске сильного проекта для долгосрочного сотрудничества, где смогу применить свой уникальный опыт. <br><br>
+        <strong>Что я привношу в проект:</strong> глубокую экспертизу в запуске и масштабировании, понимание глобальных рынков (СНГ, Латинская Америка, Европа), свободное владение русским, английским и испанским языками, опыт работы на стыке последних технологий — от стратегии до реализации. <br><br>
+        Моя специализация: концепты, требующие глубокой проработки и стратегического видения.
       </p>
     </div>
 
-    <!-- ОПЫТ РАБОТЫ (строгие карточки) -->
+    <!-- ОПЫТ РАБОТЫ -->
     <div class="mb-10">
       <div class="flex items-center gap-3 mb-5 border-b border-gray-200 dark:border-gray-800 pb-2">
         <i class="fas fa-briefcase text-2xl text-black dark:text-white"></i>
         <h2 class="text-2xl font-bold"><span data-i18n="exp_title">Опыт работы</span> <span class="text-base font-normal text-gray-500 dark:text-gray-400 ml-2">7 лет 9 месяцев</span></h2>
       </div>
       <div class="space-y-6">
-        <!-- HIGLOBALDISTRIBUTIONJFEED LLC -->
         <div class="card p-6 transition">
           <div class="flex flex-wrap justify-between items-start gap-2 mb-2">
             <h3 class="text-xl font-bold text-gray-900 dark:text-white">"HIGLOBALDISTRIBUTIONJFEED" LLC (USA)</h3>
@@ -310,7 +275,6 @@
             <li data-i18n="high_desc2">Создание креативных гипотез, адаптация сценариев под образ и стиль конкретных блогеров, контроль реализации на съемочной площадке и при монтаже.</li>
           </ul>
         </div>
-        <!-- Brega.app -->
         <div class="card p-6">
           <div class="flex flex-wrap justify-between items-start gap-2">
             <h3 class="text-xl font-bold text-gray-900 dark:text-white">Brega.app</h3>
@@ -324,7 +288,6 @@
             <li data-i18n="brega_desc4">Интеграция с Mercado Pago, проработка моделей монетизации.</li>
           </ul>
         </div>
-        <!-- Bondah -->
         <div class="card p-6">
           <div class="flex flex-wrap justify-between items-start gap-2">
             <h3 class="text-xl font-bold text-gray-900 dark:text-white">Bondah</h3>
@@ -337,7 +300,6 @@
             <li data-i18n="bondah_desc3">Запуск на новые рынки, стратегии привлечения и удержания пользователей.</li>
           </ul>
         </div>
-        <!-- Crypto Logic Writer -->
         <div class="card p-6">
           <div class="flex flex-wrap justify-between items-start gap-2">
             <h3 class="text-xl font-bold text-gray-900 dark:text-white">Crypto Logic Writer</h3>
@@ -350,7 +312,6 @@
             <li data-i18n="crypto_desc3">Помощь новым членам команды в адаптации и вкладе в разработку.</li>
           </ul>
         </div>
-        <!-- Crypto Capital -->
         <div class="card p-6">
           <div class="flex flex-wrap justify-between items-start gap-2">
             <h3 class="text-xl font-bold text-gray-900 dark:text-white">Crypto Capital</h3>
@@ -363,7 +324,6 @@
             <li data-i18n="cap_desc3">Полный цикл управления продуктом: от идеи до реализации.</li>
           </ul>
         </div>
-        <!-- Точка Банк -->
         <div class="card p-6">
           <div class="flex flex-wrap justify-between items-start gap-2">
             <h3 class="text-xl font-bold text-gray-900 dark:text-white">"Точка Банк"</h3>
@@ -376,7 +336,6 @@
             <li data-i18n="tbank_desc3">Консультирование по комплаенсу и регуляторным требованиям.</li>
           </ul>
         </div>
-        <!-- Блокнот Онлайн -->
         <div class="card p-6">
           <div class="flex flex-wrap justify-between items-start gap-2">
             <h3 class="text-xl font-bold text-gray-900 dark:text-white">Блокнот Онлайн</h3>
@@ -391,7 +350,7 @@
       </div>
     </div>
 
-    <!-- Навыки + образование - строгая сетка -->
+    <!-- Навыки + образование -->
     <div class="grid md:grid-cols-2 gap-6 mb-10">
       <div class="card p-6">
         <h3 class="text-xl font-bold flex items-center gap-2 mb-4 border-b border-gray-200 dark:border-gray-800 pb-2"><i class="fas fa-code-branch text-xl text-black dark:text-white"></i> <span data-i18n="skills_title">Навыки</span></h3>
@@ -428,7 +387,7 @@
       </div>
     </div>
 
-    <!-- Портфолио / креативное продюсирование - монохромные блоки -->
+    <!-- Портфолио -->
     <div class="card p-6 mb-8">
       <h2 class="text-xl font-bold flex items-center gap-2 mb-4 border-b border-gray-200 dark:border-gray-800 pb-2"><i class="fas fa-video text-2xl text-black dark:text-white"></i> <span data-i18n="portfolio_title">Портфолио и креативное продюсирование</span></h2>
       <div class="space-y-4">
@@ -452,7 +411,6 @@
       </div>
     </div>
 
-    <!-- Action buttons -->
     <div class="flex flex-wrap gap-5 justify-start mt-6 mb-10">
       <a href="mailto:gavrda37@gmail.com" class="accent-bg px-7 py-3 font-bold shadow-none transition flex items-center gap-2"><i class="fas fa-envelope text-white dark:text-black"></i> <span data-i18n="email">Написать</span></a>
     </div>
@@ -471,8 +429,8 @@
   <script>
     const translations = {
       ru: {
-        header_subtitle: "Creative Producer & Screenwriter & Digital Strategy",
-        desired_role: "Руководитель проекта",
+        header_subtitle: "Creative Producer · Screenwriter · Project Manager · Product Lead · AI & Digital Strategy",
+        desired_role: "Руководитель проекта / Creative Producer",
         salary: "310 000 ₽",
         salary_note: "на руки",
         job_type: "Постоянная работа",
@@ -480,7 +438,7 @@
         business_trips: "Командировки: готов(а)",
         preferred_contact: "Предпочитаемый способ связи",
         about_title: "О себе",
-        about_text: "Продуктовый менеджер и основатель с международным опытом в финтехе, блокчейне и маркетплейсах. Недавно вернулся в Россию после глубокого погружения в латиноамериканский рынок. Нахожусь в активном поиске сильного проекта для долгосрочного сотрудничества, где смогу применить свой уникальный опыт. <br><br> <strong>Что я привношу в проект:</strong> глубокую экспертизу в запуске и масштабировании IT-продуктов, понимание глобальных рынков (СНГ, Латинская Америка, Европа), свободное владение русским, английским и испанским языками, опыт работы на стыке технологий и бизнеса — от стратегии до реализации. <br><br> Моя специализация: сложные технологические продукты, требующие глубокой проработки и стратегического видения. Готов взяться за амбициозную задачу и вывести продукт на новый уровень.",
+        about_text: "Сценарист с любовью к своему делу и знанием испанского и английского языков. Написание концептов, диалогов и раскадровки в основном для коротких видеороликов с упором на маркетинг и нативные рекламные интеграции, по необходимости. С большим трепетом отношусь к проектам художественного формата. В прошлом продуктовый менеджер и основатель с международным опытом в финтехе, блокчейне и маркетплейсах. Недавно вернулся в Россию после глубокого погружения в латиноамериканский рынок. Нахожусь в активном поиске сильного проекта для долгосрочного сотрудничества, где смогу применить свой уникальный опыт. <br><br> <strong>Что я привношу в проект:</strong> глубокую экспертизу в запуске и масштабировании, понимание глобальных рынков (СНГ, Латинская Америка, Европа), свободное владение русским, английским и испанским языками, опыт работы на стыке последних технологий — от стратегии до реализации. <br><br> Моя специализация: концепты, требующие глубокой проработки и стратегического видения.",
         exp_title: "Опыт работы",
         skills_title: "Навыки",
         advanced: "Продвинутый уровень",
@@ -540,8 +498,8 @@
         portfolio_case3_title: "Рекламное продюсирование блогера - по заказу рекламы или партнерствам писать по контактам на gavrilets.com"
       },
       en: {
-        header_subtitle: "Project Manager · Product Lead · AI & Digital Strategy",
-        desired_role: "Project Manager",
+        header_subtitle: "Creative Producer · Screenwriter · Project Manager · Product Lead · AI & Digital Strategy",
+        desired_role: "Project Manager / Creative Producer",
         salary: "310,000 RUB",
         salary_note: "net",
         job_type: "Permanent",
@@ -549,7 +507,7 @@
         business_trips: "Business trips: ready",
         preferred_contact: "Preferred contact method",
         about_title: "About Me",
-        about_text: "Product manager and founder with international experience in fintech, blockchain, and marketplaces. Recently returned to Russia after deep immersion in the Latin American market. Actively seeking a strong long-term project where I can apply my unique expertise.<br><br><strong>What I bring to the project:</strong> deep expertise in launching and scaling IT products, understanding of global markets (CIS, Latin America, Europe), fluent Russian, English, and Spanish, experience at the intersection of technology and business — from strategy to execution.<br><br>My specialization: complex tech products requiring deep development and strategic vision. Ready to take on an ambitious challenge and bring the product to the next level.",
+        about_text: "Screenwriter passionate about my craft, fluent in Spanish and English. Writing concepts, dialogues, and storyboards primarily for short videos with a focus on marketing and native advertising integrations when needed. I have great reverence for artistic projects. In the past, product manager and founder with international experience in fintech, blockchain, and marketplaces. Recently returned to Russia after deep immersion in the Latin American market. Actively seeking a strong project for long-term collaboration where I can apply my unique experience. <br><br> <strong>What I bring to the project:</strong> deep expertise in launching and scaling, understanding of global markets (CIS, Latin America, Europe), fluent Russian, English, and Spanish, experience at the intersection of cutting-edge technologies — from strategy to implementation. <br><br> My specialization: concepts that require deep development and strategic vision.",
         exp_title: "Work Experience",
         skills_title: "Skills",
         advanced: "Advanced",
@@ -609,8 +567,8 @@
         portfolio_case3_title: "Blogger advertising production - for ad orders or partnerships contact via gavrilets.com"
       },
       es: {
-        header_subtitle: "Project Manager · Product Lead · AI & Digital Strategy",
-        desired_role: "Director de Proyectos",
+        header_subtitle: "Productor Creativo · Guionista · Project Manager · Product Lead · IA y Estrategia Digital",
+        desired_role: "Director de Proyectos / Productor Creativo",
         salary: "310,000 RUB",
         salary_note: "neto",
         job_type: "Trabajo permanente",
@@ -618,14 +576,14 @@
         business_trips: "Viajes de negocios: dispuesto",
         preferred_contact: "Método de contacto preferido",
         about_title: "Sobre mí",
-        about_text: "Gerente de producto y fundador con experiencia internacional en fintech, blockchain y marketplaces. Recientemente regresé a Rusia tras una inmersión en el mercado latinoamericano. Busco un proyecto sólido a largo plazo.<br><br><strong>Qué aporto al proyecto:</strong> experiencia en lanzamiento y escalado de productos IT, conocimiento de mercados globales (CIS, Latinoamérica, Europa), dominio de ruso, inglés y español, y experiencia en la intersección de tecnología y negocio, desde la estrategia hasta la ejecución.<br><br>Mi especialización: productos tecnológicos complejos que requieren un desarrollo profundo y visión estratégica. Listo para asumir un desafío ambicioso y llevar el producto al siguiente nivel.",
+        about_text: "Guionista apasionado por su oficio, con dominio de español e inglés. Redacción de conceptos, diálogos y storyboards principalmente para videos cortos con enfoque en marketing e integraciones publicitarias nativas cuando es necesario. Siento gran veneración por los proyectos artísticos. En el pasado, gerente de producto y fundador con experiencia internacional en fintech, blockchain y marketplaces. Recientemente regresé a Rusia tras una inmersión profunda en el mercado latinoamericano. Busco activamente un proyecto sólido para colaboración a largo plazo donde pueda aplicar mi experiencia única. <br><br> <strong>Lo que aporto al proyecto:</strong> profunda experiencia en lanzamiento y escalamiento, comprensión de mercados globales (CIS, Latinoamérica, Europa), dominio de ruso, inglés y español, experiencia en la intersección de tecnologías de vanguardia — desde la estrategia hasta la implementación. <br><br> Mi especialización: conceptos que requieren desarrollo profundo y visión estratégica.",
         exp_title: "Experiencia laboral",
         skills_title: "Habilidades",
         advanced: "Avanzado",
         intermediate: "Intermedio",
         education_title: "Educación",
         portfolio_title: "Portafolio y producción creativa",
-        email: "Correo",
+        email: "Contactar",
         footer_updated: "Actualizado por Bogdan Gavrilets — 03/04/26. Construido para ser claro y recordado.",
         duration_high: "4 meses",
         duration_brega: "8 meses",
